@@ -17,6 +17,15 @@ class User:
 # Takes in two user objects and outputs a float denoting compatibility
 def compute_score(user1, user2):
     # YOUR CODE HERE
+    if user1.gender != user2.preferences && user2.gender != user1.preferences 
+        return 0
+    if abs(user1.grad_year - user2.grad_year) > 2
+        return 0
+    int compatibility = 0
+    for i in range (len(responses) - 1)
+        if user1.responses[i] = user2.responses[i]
+            compatibility = compatibility + 1
+    if compatibilty > 
     return 0
 
 
