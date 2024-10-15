@@ -21,6 +21,42 @@ def run_matching(scores: List[List], gender_id: List, gender_pref: List) -> List
             - What data structure can you use to take advantage of this fact when forming your matches?
         - This is by no means an exhaustive list, feel free to reach out to us for more help!
     """
+    """
+    sorry ahead of time for the pseudocode. The combination of not being at the meeting along with not being too familiar with
+    python made this a bit difficult to implement.
+    """
+
+    "first, we have a 9 x 10 matrix of scores in raw_scores.txt, so we can use create a 9x10 matrix and fill it with the values in the text file"
+
+    "we create a list using genders.txt with the genders of all the people who submitted"
+
+    "we will also create a list using gender_preferences.txt with the preferences of each user"
+
+    "we can go through the scores and sort them in ascending numerical order"
+    
+    "we should then locate the user who the score belongs to"
+    
+    "if we have users 0, 1, and 2, we start at user 1"
+    "subtract user 1's scores by user 0's score and take abs value"
+    "subtract user 1's scores by user 2's score and take abs value"
+    "if the first difference is greater than the second"
+        "if user 0's preference equals user 1's gender and if user 1's preference equals user 0's gender, then we can consider them a match"
+    "else"
+        "if user 2's preference equals user 1's gender and if user 1's preference equals user 2's gender, then we can consider them a match"
+        "else"
+            "if user 0's preference equals user 1's gender and if user 1's preference equals user 0's gender, then we can consider them a match"
+    "we can set user 1 as the proposer and the other user as the receiver and add them to the list matches"
+    "we can remove the values in the lists and matrix/set them to null"
+    "continue this process"
+
+    "we then go through again and repeat this process, trying to find the closest scores and making sure preferences match"
+    "insert these values in the match list"
+
+    "if the table is completely null, then we return matches"
+
+    
+
+    
     matches = [()]
     return matches
 
